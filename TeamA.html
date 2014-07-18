@@ -67,6 +67,7 @@ var teamColour = "";
 					localStorage.setItem("A4CTeamColor", teamColour);
 					
 					
+					
 				});					
 			});				
 			
@@ -112,12 +113,28 @@ function displayWeather2(){
 	}*/
 		
       //context.font = '16pt Calibri';
-     // context.fillStyle = '#333';     	
+     // context.fillStyle = '#333';     
+     
+    
+			var x = document.getElementById("teamTable");
+			x.innerHTML = "TEST TEAM COLOUR";
+			x.bgColor = localStorage.getItem("A4CTeamColor");
+			x.style.fontSize = '20px';
+			x.style.fontFamily = 'arial';
+			x.style.color = 'white';
+			x.style.border = '1px solid #FFFFFF';
+			
+		
+     
+     	
 	}
 
 });
 
 
+			
+			
+		
 
 
 </script>
@@ -129,9 +146,31 @@ function displayWeather2(){
 
 
 <section data-role="page" id="pagePreferences">
-    <section data-role="header">
-        <h2>KID STORIES FOR SPORT DADS</h2>
-    </section>
+   	<div data-role="header" data-theme="a">
+	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6908679240944495";
+/* MobileBanner320by50 */
+google_ad_slot = "7580604750";
+google_ad_width = 320;
+google_ad_height = 50;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
+		<div data-role="navbar" data-theme="c">
+			<ul>
+      			<li><a href="Main.html" rel="external" data-transition="slideup" data-prefetch>Home</a></li>
+      			<li><a href="NBA.html" rel="external" data-transition="slidedown" data-prefetch>NBA</a></li>
+				<li><a href="NFL.html" rel="external" data-transition="pop" data-prefetch>NFL</a></li>
+				<li><a href="MLB.html" rel="external" data-transition="pop" data-prefetch>MLB</a></li>
+				<li><a href="NHL.html" rel="external" data-transition="slidedown" data-prefetch>NHL</a></li>								
+			</ul>
+		</div><!-- /navbar-->
+		
+	</div><!-- /header -->
     <section data-role="content">		
          
           
@@ -143,7 +182,7 @@ function displayWeather2(){
 		<table id="teamTable">
 		<tr><td>placeholder</td></tr>
 		</table>
-		<script>
+		<!--<script>
 			var x = document.getElementById("teamTable");
 			x.innerHTML = "TEST TEAM COLOUR";
 			x.bgColor = localStorage.getItem("A4CTeamColor");
@@ -151,7 +190,8 @@ function displayWeather2(){
 			x.style.fontFamily = 'arial';
 			x.style.color = 'white';
 			x.style.border = '1px solid #FFFFFF';
-		</script>
+			
+		</script>-->
 		</div>
 		<img id="weatherImage" /> 
 		<p id="message" />  
