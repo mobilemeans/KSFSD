@@ -4,6 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Kids Stories For Sport Dads</title>
+		
+		<script type="text/javascript" src="phonegap.js"></script> 
+    <script type="text/javascript">
+      document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
+		
 		<link rel="stylesheet"  href="http://demos.jquerymobile.com/1.3.0-beta.1/css/themes/default/jquery.mobile-1.3.0-beta.1.css">
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<!--<script src="http://demos.jquerymobile.com/1.3.0-beta.1/docs/demos/_assets/js/jquery.mobile.demos.js"></script>-->
@@ -14,6 +20,18 @@
 	
 	</head>
 	<body>
+<script>
+	document.addEventListener("deviceready", function (){
+      document.addEventListener("backbutton", onBackKeyDown, false); 
+  }, false); 
+
+  function onBackKeyDown(){ 
+    navigator.app.exitApp(); 
+  } 
+</script>
+	
+	
+	
 		<div data-role="page" class="ui-responsive-panel">
 
 			<div data-role="header" data-theme="a">
@@ -65,7 +83,10 @@
 			<a href="NHL.html" rel="external" data-transition="slideup" data-prefetch>Hockey (NHL)</a>
 		</li>	
 		<li data-filtertext="Tshirt">
-			<a href="Tshirt.html" rel="external" data-transition="slideup" data-prefetch>#1 FAN</a>
+			<a href="Tshirt.html" rel="external" data-transition="slideup" data-prefetch>Coloring</a>
+		</li>
+		<li data-filtertext="Music">
+			<a href="Music.html" rel="external" data-transition="slideup" data-prefetch>Music</a>
 		</li>
 		<li data-filtertext="FAQ">
 			<a href="FAQ.html" rel="external" data-transition="slideup" data-prefetch>FAQ</a>

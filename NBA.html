@@ -217,6 +217,41 @@ function showWidget(x){
 	//redirect to new page 	
 	//window.location.href = 'Team.html';        
 }
+
+
+function validateProfile(){
+	//validate that the profile has been entered
+	var league = document.getElementById("leagueSelect");
+	var team = document.getElementById("teamSelect");
+	var city = document.getElementById("myCity");
+	var name = document.getElementById("myName");
+	var age = document.getElementById("myAge");
+	
+	if (league.selectedIndex == 0){
+		alert('Please select the league.');
+		league.focus();
+	}
+	else if (team.selectedIndex == 0){
+		alert('Please select the team.');
+		team.focus();
+	}
+	else if(name.value == ""){
+		alert('Please enter your name.');
+		name.focus();
+	}
+	else if (city.value == ""){
+		alert('Please enter your city.');
+		city.focus();
+	}	
+	else if(age.value == 0){
+		alert('Please enter your age.');
+		age.focus();
+	}
+	else {
+		//passed validation
+		window.location.href = 'Team.html';
+	}	
+}
 //]]>
 </script>
 	
@@ -280,7 +315,7 @@ function showWidget(x){
 		
 		
 	</section>
-	<a href="Team.html" rel="external" data-transition="pop" data-role="button" data-prefetch>Step 5.&nbsp;&nbsp;Click to read story!</a>
+	<a href="#" onclick="validateProfile()" rel="external" data-transition="pop" data-role="button" data-prefetch>Step 5.&nbsp;&nbsp;Click to read story!</a>
 		<p>Note:  We do not collect or recieve any of your entered information and it is used only for the purposes of each story.</p>
 	<div id="footer"><center>
 		<img src="img/A4C.jpg" />
